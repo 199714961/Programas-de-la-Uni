@@ -3,18 +3,15 @@
 #include<string.h>
 using namespace std;
 
-//<<   >>       \n
 
 
 
 struct Messenger{
-		//cada usuario tendra un maximo de espacio de 20 mensajes enviados y 20 mensajes recibidos
 		string send[20];  
 		string received[20];
 };
 
 struct Wall{
-	//Cada usuario puede postear un maximo de 10 mensajes
 		string title[10];
 		string posted[10];
 };
@@ -28,18 +25,15 @@ struct User{
 	struct Messenger message;
 	struct Wall post;
 };
-//Funcion para ingresar
-
-
 
 int main(){
-	User users[20]; //Para guardar a los usuarios creados
+	User users[20];
 	
 	int choice1, choice2;
 	int r=0;
 	
 	
-	//Primero creamos los usuarios
+	
 	int news;
     cout<<"Cuantos usuarios nuevos desea crear? (maximo 20) \n";
 	cin>>news;
@@ -94,7 +88,7 @@ int main(){
 				cin>>choice2;
 				if(choice2==1){
 					
-					if(users[pUser].post.posted[0]==""){ //Si el array "posted" en la posicion 0 no tiene nada entonces...
+					if(users[pUser].post.posted[0]==""){ 
 						cout<<"No posee publicaciones\n";
 					}else{                               //Si el array "posted" posee algo en el espacio 0 entonces mostrar todo lo que tiene:
 						for(int i = 0; i < 10; i = i + 1){ 
